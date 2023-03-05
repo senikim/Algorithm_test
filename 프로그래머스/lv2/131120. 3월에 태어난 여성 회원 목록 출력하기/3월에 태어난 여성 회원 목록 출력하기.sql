@@ -35,7 +35,7 @@ AND TLNO IS NOT NULL
 ORDER BY MEMBER_ID ASC
 
 
--- [TRIAL & ERROR 4]
+-- [SOLVE]
 -- 문제 제대로 안읽음 : "여성 회원"만 추출해야 함!!
 
 SELECT MEMBER_ID, MEMBER_NAME, GENDER, date_format(DATE_OF_BIRTH, "%Y-%m-%d") AS DATE_OF_BIRTH
