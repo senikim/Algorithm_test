@@ -2,6 +2,18 @@
 -- 입양일 잘못 입력 & 보호 시작일보다 입양일이 더 빠른 
 -- 동물의 아이디와 이름 & 보호 시작일이 빠른 순 (오름차순)
 
+-- [TRIAL & ERROR 1]
+-- [WRONG]
+SELECT A.ANIMAL_ID, A.NAME
+FROM ANIMAL_INS AS A
+INNER JOIN ANIMAL_OUTS AS B ON A.ANIMAL_ID = B.ANIMAL_ID
+WHERE A.DATETIME < B.DATETIME
+ORDER BY A.DATETIME 
+
+-- [TRIAL & ERROR 2]
+-- [SOLVE]
+-- 날짜 이전, 이후 비교할 때도 비교 연산자를 쓴다
+-- 보호 시작일보다 입양일이 빠르니까 A.DATETIME > B.DATETIME 이어야 함
 SELECT A.ANIMAL_ID, A.NAME
 FROM ANIMAL_INS AS A
 INNER JOIN ANIMAL_OUTS AS B ON A.ANIMAL_ID = B.ANIMAL_ID
