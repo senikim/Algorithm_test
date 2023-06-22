@@ -32,3 +32,8 @@ def solution(array, commands):
 # [Error] 답이 다름
 # [Solution] 정렬을 안함
 '''
+
+# 다른 사람 풀이 참고 - 한줄 코드
+def solution(array, commands):
+    return list(map(lambda x: sorted(x[0]-1:x[1])[x[2]-1], commands))
+
