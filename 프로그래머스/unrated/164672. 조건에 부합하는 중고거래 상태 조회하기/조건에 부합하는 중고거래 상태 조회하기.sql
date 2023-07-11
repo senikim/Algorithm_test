@@ -14,6 +14,7 @@ CASE
     ELSE "거래완료"
     END AS STATUS
  -- 다중 변경 V2 : CASE WHEN - ELSE - END AS "표기할 변수명"
+ -- sql의 case when : python의 elif 문법 같은 느낌 
  
 FROM USED_GOODS_BOARD
 WHERE CREATED_DATE LIKE "2022-10-05"
