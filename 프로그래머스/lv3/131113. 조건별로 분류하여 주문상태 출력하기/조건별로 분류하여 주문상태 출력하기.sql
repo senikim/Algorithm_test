@@ -12,6 +12,7 @@ END AS "출고여부"
 FROM FOOD_ORDER
 ORDER BY ORDER_ID ASC
 
+    
 -- TRIAL & ERROR 1
 SELECT a.ORDER_ID, a.PRODUCT_ID, DATE_FORMAT(a.OUT_DATE, "%Y-%m-%d") AS OUT_DATE, DATE_FORMAT(b.OUT_DATE, "%Y-%m-%d") AS "출고여부"
 CASE
@@ -23,4 +24,8 @@ FROM FOOD_ORDER AS a
 INNER JOIN FOOD_ORDER AS b ON a.OUT_DATE = b.OUT_DATE
 
 -- ERROR : 값 출력 안됨
--- 
+-- SOL1) CASE WHEN - ELSE - END 문법은 FROM절 전에 써야 함
+-- SOL2) DATE_FORMAT(컬럼명, '%Y-%m-%d') 이용해서 OUT_DATE 포맷을 "날짜만" 뽑히게 변경
+-- SOL2) SELECT절에 있는 b.OUT_DATE 부분 지워야 함
+--       처음엔 "출고여부" 칼럼이 OUT_DATE를 복사해서 만들어야 한다고 생각해서 SELF JOIN을 했는데, 데이터가 복제되어서 중복되는 문제 발생. 
+--       -> SELF JOIN이 아니었음..
