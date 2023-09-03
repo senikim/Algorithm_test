@@ -1,3 +1,4 @@
+# 첫 풀이
 def solution(arr):
     answer = []
     answer.append(arr[0])
@@ -7,8 +8,18 @@ def solution(arr):
         else:
             answer.append(arr[i])
     return answer
+# [시간복잡도 : O(N) ; for문으로 n번째 순회]
 
-
+# 다른 풀이 : USING STACK
+def solution(arr):
+    answer = []
+    answer.append(arr[0])
+    for i in range(1, len(arr)):
+        answer.append(arr[i])
+        if answer[-2] == arr[i]:
+            answer.pop()
+    return answer
+# [시간복잡도 : O(N) ; for문으로 n번째 순회]
 
 # [TRIAL 1]
 def solution(arr):
