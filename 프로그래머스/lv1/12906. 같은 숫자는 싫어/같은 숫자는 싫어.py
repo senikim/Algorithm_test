@@ -8,7 +8,11 @@ def solution(arr):
         else:
             answer.append(arr[i])
     return answer
-# [시간복잡도 : O(N) ; for문으로 n번째 순회]
+# 효율성테스트
+# 테스트 1 〉	통과 (94.89ms, 27.8MB)
+# 테스트 2 〉	통과 (170.93ms, 27.8MB)
+# 테스트 3 〉	통과 (95.90ms, 27.9MB)
+# 테스트 4 〉	통과 (89.83ms, 27.9MB)
 
 # 다른 풀이 : USING STACK
 def solution(arr):
@@ -19,7 +23,13 @@ def solution(arr):
         if answer[-2] == arr[i]:
             answer.pop()
     return answer
-# [시간복잡도 : O(N) ; for문으로 n번째 순회]
+# 효율성 테스트
+# 테스트 1 〉	통과 (258.60ms, 28MB)
+# 테스트 2 〉	통과 (151.24ms, 27.9MB)
+# 테스트 3 〉	통과 (259.51ms, 27.9MB)
+# 테스트 4 〉	통과 (138.16ms, 28MB)
+
+
 
 # [TRIAL 1]
 def solution(arr):
