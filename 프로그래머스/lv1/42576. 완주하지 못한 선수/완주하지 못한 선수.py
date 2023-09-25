@@ -9,6 +9,28 @@ def solution(participant, completion):
     return participant[-1]
     # [sort한 두 배열이 위에서 completion의 길이 만큼 loop돌았는데도 발견못했으니까 결국 participant의 맨 마지막 원소가 답이 됨]
 
+'''
+# TRIAL & ERROR
+
+# 완주하지 못한 단 한명의 선수 출력 
+# 동명이인 처리
+def solution(participant, completion):
+    answer = ''
+    participant.sort()
+    completion.sort()
+    for c in range(len(completion)):
+        if participant[c] != completion[c]:
+            answer = participant[c]
+            break [#for문 밖으로]
+	    
+        # 예외처리 : for문 다 돌았는데도 배열 간 다른 원소 없으면 
+        # participant의 맨 마지막 원소 출력
+        answer = participant[-1]
+    return answer
+
+# Error
+어디가 틀렸을까
+'''
 
 # 다른사람 풀이
 import collections
