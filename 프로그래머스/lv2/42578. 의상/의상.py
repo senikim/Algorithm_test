@@ -15,7 +15,7 @@ def solution(clothes):
         
     return answer - 1 #아무것도 입지 않는 경우 제외
 
-
+'''
 # Trial 1. 어떤 건 맞고 어떤 건 틀림 - 근데 일단 풀이 방법은 맞았음
 
 # 종류별로 나누고 그 개수에 +1(아예 안걸치는거), 종류별로 곱하고 -1(모든 종류가 0일 경우 제외)
@@ -40,3 +40,4 @@ def solution(clothes):
             value[v] += 1
         return [value[i] * value[i+1] -1 for i in range(len(value)-1)][0]
     return sum(value)
+'''
