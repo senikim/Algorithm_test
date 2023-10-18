@@ -6,7 +6,6 @@ def solution(genres, plays):
     answer = []
     music = []
     dic = {}
-    #pre = []
     
     for m in enumerate(zip(plays, genres)):
         music.append(m)
