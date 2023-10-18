@@ -23,10 +23,13 @@ def solution(genres, plays):
 
     for i in range(len(dic)):
         q = 0
+        # [아래 하위 for문에서 2개만 append하고 break 되어야 하기 때문에]
         for u in range(len(music)):
             if music[u][1][1] == dic[i][0]:
                 answer.append(music[u][0])
                 q += 1
+                # [music안에 있는 장르와 dic의 장르가 같은 경우가 있을 때마다 +=1]
+                # [각 장르별로 2개의 곡만 추출해야 하기 때문에 q가 2가 될 때 stop]
             else:
                 pass
             if q == 2:
