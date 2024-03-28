@@ -15,5 +15,11 @@ def solution(hp):
             return n1+m1
     else :
         return hp/5
-    
-    
+
+
+'''
+# 다른 풀이
+def solution(hp):
+    return hp//5 + (hp%5)//3 + ((hp%5)%3)
+#            k        m            n   
+'''
