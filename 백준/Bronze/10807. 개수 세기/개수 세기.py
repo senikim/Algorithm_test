@@ -10,7 +10,7 @@ for i in numbers:
 print(n)
 
 # Trial2. 리스트.count() 이용
-# 시간복잡도 : N
+# 시간복잡도 : O(N)
 N = input()
 numbers = list(map(int, input().split()))
 target = int(input())
