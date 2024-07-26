@@ -9,3 +9,9 @@ def solution(array):
         answer = array[int((len(array)+1)/2-1)]
         # answer = array[(len(array)+1)/2-1]
     return answer
+
+
+
+# 방법2. (다른사람풀이) : 몫 이용하기
+def solutio(array):
+    return sorted(array)[len(array)//2]
